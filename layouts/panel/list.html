@@ -1,0 +1,103 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+  {{ with .Content }}
+    <section class="section-sm pt-10 pb-0">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="lg:col-8 content text-center">{{ . }}</div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  <!-- Suggested questions -->
+  {{ with .Params.suggested_questions }}
+    <section class="section-sm pt-[10px] pb-0">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="lg:col-8">
+            <h2 class="h3 mb-6 text-center">Topics</h2>
+            <ul class="sm:columns-2 sm:gap-x-8">
+              {{ range . }}
+                <li class="relative mb-4 pl-6 break-inside-avoid">
+                  <i class="fa fa-circle-dot absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Suggested questions -->
+
+  <!-- Ask the panelists -->
+  {{ with .Params.ask_form_action }}
+    <section class="section-sm pt-10 pb-0">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="lg:col-8">
+            <h2 class="h3 mb-6 text-center">Ask the Panelists</h2>
+            <iframe name="ask-panelists-sink" class="hidden" title="form sink"></iframe>
+            <form
+              action="{{ . }}"
+              method="post"
+              target="ask-panelists-sink"
+              onsubmit="var f=this;f.querySelector('button').disabled=true;f.querySelector('.ask-thanks').classList.remove('hidden');setTimeout(function(){f.reset();f.querySelector('button').disabled=false},1500);">
+              <textarea
+                name="{{ $.Params.ask_form_entry }}"
+                class="form-textarea w-full mb-4"
+                rows="3"
+                required
+                placeholder="Type your question for the panel…"></textarea>
+              <div class="text-right">
+                <button type="submit" class="btn btn-primary">Submit question</button>
+                <p class="ask-thanks hidden mt-4 text-green-600">Thanks — your question was submitted.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Ask the panelists -->
+
+  <!-- Panelists -->
+  {{ if .RegularPages }}
+  <section class="section pt-[10px] pb-0">
+    <div class="container">
+      <h2 class="h3 mb-12 text-center">Panelists</h2>
+      <div class="row">
+        {{ range .RegularPages }}
+          <div class="md:col-6 lg:col-3 mb-14">
+            <div class="bg-light dark:bg-darkmode-light rounded p-8 text-center">
+              <a href="{{ .RelPermalink }}">
+                {{ if .Params.image }}
+                  {{ partial "image" (dict "Src" .Params.image "Context" .Page "Alt" .Title "Class" "mx-auto mb-6 rounded" "size" "120x120") }}
+                {{ end }}
+                <h4 class="mb-1">{{ .Title }}</h4>
+              </a>
+              {{ with .Params.description }}
+                <p class="mb-4 text-sm">{{ . | safeHTML }}</p>
+              {{ end }}
+              <ul class="social-icons">
+                {{ range .Params.social }}
+                  <li>
+                    <a href="{{ .link | safeURL }}" target="_blank" rel="noopener nofollow">
+                      <span class="sr-only">{{ .title }}</span>
+                      <i class="{{ .icon }}"></i>
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+  <!-- /Panelists -->
+{{ end }}

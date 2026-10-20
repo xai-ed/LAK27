@@ -1,0 +1,78 @@
+{{ define "main" }}
+  <section class="section-sm pb-0">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="lg:col-8 text-center">
+          <span class="text-text-light font-secondary mb-2 inline-block uppercase tracking-wider">
+            Invited Keynote
+          </span>
+          <h1 class="h2 mb-6">{{ .Title | markdownify }}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  {{ with .Params.abstract }}
+    <section class="section-sm pt-8">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="lg:col-8">
+            <h2 class="h4 mb-4">Abstract</h2>
+            <div class="content">
+              {{ . | markdownify }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Abstract -->
+
+  <!-- Speaker -->
+  {{ with .Params.speaker }}
+    <section class="section-sm pt-0">
+      <div class="container">
+        <div
+          class="row border-border dark:border-darkmode-border justify-center border-t pt-14">
+          {{ with and .image (resources.Get (strings.TrimPrefix "/" .image)) }}
+            <div class="lg:col-3 md:col-4 mb-6 text-center">
+              {{ $img := .Resize "700x q82" }}
+              <img
+                class="mx-auto rounded w-full"
+                src="{{ $img.RelPermalink }}"
+                alt="{{ $.Params.speaker.name }}"
+                width="{{ $img.Width }}"
+                height="{{ $img.Height }}" />
+            </div>
+          {{ end }}
+          <div class="lg:col-7 md:col-8">
+            <h2 class="h4 mb-1">{{ .name }}</h2>
+            {{ with .affiliation }}
+              <p class="text-text-light mb-4">{{ . | markdownify }}</p>
+            {{ end }}
+            <div class="content">
+              {{ $.Content }}
+            </div>
+            {{ with .social }}
+              <ul class="social-icons mt-6">
+                {{ range . }}
+                  <li>
+                    <a
+                      href="{{ .link | safeURL }}"
+                      target="_blank"
+                      rel="noopener nofollow">
+                      <span class="sr-only">{{ .name }}</span>
+                      <i class="{{ .icon }}"></i>
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Speaker -->
+{{ end }}

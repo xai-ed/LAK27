@@ -1,0 +1,59 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Call for Papers"
+url = "/cfp"
+weight = 2
+
+[[main]]
+name = "Keynote"
+url = "/keynote"
+weight = 3
+
+[[main]]
+name = "Panel"
+url = "/panel"
+weight = 4
+
+[[main]]
+name = "Schedule"
+url = "/schedule"
+weight = 5
+
+[[main]]
+name = "Proceedings"
+url = "/proceedings"
+weight = 6
+
+[[main]]
+name = "Organisers"
+url = "/organisers"
+weight = 7
+
+
+# footer menu
+[[footer]]
+name = "Call for Papers"
+url = "/cfp"
+weight = 1
+
+[[footer]]
+name = "Schedule"
+url = "/schedule"
+weight = 2
+
+[[footer]]
+name = "Proceedings"
+url = "/proceedings"
+weight = 3
+
+[[footer]]
+name = "Organisers"
+url = "/organisers"
+weight = 4
