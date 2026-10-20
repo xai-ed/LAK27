@@ -1,1 +1,9 @@
 /* Add your own custom styles here */
+
+/* Interpretation-action loop (home banner): hide the travelling dot for
+   visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .loop-dot {
+    display: none;
+  }
+}
