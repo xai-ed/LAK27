@@ -40,9 +40,9 @@ Submissions are invited in English, and the workshop is conducted in English. No
 
 | Milestone | Date |
 |---|---|
-| Submission deadline | TBA |
-| Notification of acceptance | TBA |
-| Camera-ready version | TBA |
+| Submission deadline | 4 December 2026 |
+| Notification of acceptance | 18 December 2026 |
+| Camera-ready version | 28 February 2027 |
 | Workshop | March 2027 (exact day TBA), Recife, Brazil |
 
 Submission format and the submission link will be announced here.
