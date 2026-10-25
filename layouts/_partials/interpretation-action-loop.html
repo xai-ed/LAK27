@@ -1,4 +1,4 @@
-{{/* Interpretation-action loop: numbered pills evenly spaced clockwise on a
+{{/* Interpretation-action loop: labelled pills evenly spaced clockwise on a
   ring, a chevron midway along each arc, and the outcome in the middle.
   Colours come from the .loop-* rules in assets/css/custom.css.
   Context: banner.loop */}}
@@ -58,7 +58,7 @@
           height="{{ $h }}"
           rx="{{ div $h 2 }}" />
         <text x="{{ printf "%.1f" $x }}" y="{{ printf "%.1f" $y }}" text-anchor="middle" dominant-baseline="central">
-          <tspan class="loop-num">{{ printf "%02d" (add $i 1) }}</tspan><tspan class="loop-label" dx="9">{{ $node.label }}</tspan>
+          <tspan class="loop-label">{{ $node.label }}</tspan>
         </text>
       </g>
     {{ end }}
