@@ -51,7 +51,7 @@
 .loop-center-text {
   fill: var(--loop-text);
   font-family: var(--font-primary);
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
 }
 

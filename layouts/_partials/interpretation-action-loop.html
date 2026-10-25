@@ -34,9 +34,10 @@
     {{ end }}
 
     {{ with .center }}
-      <circle class="loop-center" cx="{{ $cx }}" cy="{{ $cy }}" r="96" />
+      {{/* sized to leave a clear gap inside the 3 and 9 o'clock pills */}}
+      <circle class="loop-center" cx="{{ $cx }}" cy="{{ $cy }}" r="{{ sub $r (add (div $w 2) 12.0) }}" />
       {{ $lines := .lines }}
-      {{ $lh := 27.0 }}
+      {{ $lh := 24.0 }}
       {{ $y0 := sub $cy (div (mul $lh (sub (len $lines) 1)) 2) }}
       <text class="loop-center-text" text-anchor="middle" dominant-baseline="central">
         {{ range $j, $line := $lines }}
