@@ -12,6 +12,9 @@
     </div>
   </section>
 
+  {{ with .Params.coming_soon }}
+    {{ partial "coming-soon" . }}
+  {{ else }}
   <!-- Abstract -->
   {{ with .Params.abstract }}
     <section class="section-sm pt-8">
@@ -75,4 +78,5 @@
     </section>
   {{ end }}
   <!-- /Speaker -->
+  {{ end }}
 {{ end }}

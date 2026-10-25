@@ -5,7 +5,7 @@ description: "Call for papers and demonstrations for the XAI-Ed 2027 workshop at
 draft: false
 ---
 
-### XAI-Ed 2027 @ LAK27
+### XAI-Ed @ LAK27
 
 **Closing the Interpretation-Action Loop: Actionable Explainable AI to Enhance Learning and Teaching**
 

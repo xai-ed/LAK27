@@ -1,4 +1,4 @@
-# XAI-Ed 2027 @ LAK27
+# XAI-Ed @ LAK27
 
 Website for XAI-Ed 2027: Closing the Interpretation-Action Loop — Actionable Explainable AI to Enhance Learning and Teaching, a full-day workshop at the 17th International Conference on Learning Analytics & Knowledge (LAK27), Recife, Brazil. Served at <https://www.xai-ed.net/LAK27/>.
 

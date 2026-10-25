@@ -2,7 +2,8 @@
 enable: true
 label: "Invited Talk"
 title: "Explainability and Learning Outcomes"
-speaker: "Speaker to be announced"
+speaker: ""
+announcement: "Speaker to be announced soon"
 affiliation: ""
 # image: "/images/<speaker>.jpg"
 button:

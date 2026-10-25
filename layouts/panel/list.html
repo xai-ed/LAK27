@@ -11,6 +11,9 @@
     </section>
   {{ end }}
 
+  {{ with .Params.coming_soon }}
+    {{ partial "coming-soon" . }}
+  {{ else }}
   <!-- Suggested questions -->
   {{ with .Params.suggested_questions }}
     <section class="section-sm pt-[10px] pb-0">
@@ -32,6 +35,7 @@
     </section>
   {{ end }}
   <!-- /Suggested questions -->
+  {{ end }}
 
   <!-- Ask the panelists -->
   {{ with .Params.ask_form_action }}

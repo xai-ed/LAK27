@@ -1,14 +1,14 @@
 {
   "main": [
     {
-      "name": "twitter",
-      "icon": "fab fa-twitter",
-      "link": "#"
+      "name": "LAK27 conference website",
+      "icon": "fa-solid fa-building-columns",
+      "link": "https://www.solaresearch.org/events/lak/lak27/"
     },
     {
-      "name": "linkedin",
-      "icon": "fab fa-linkedin",
-      "link": "#"
+      "name": "XAI-Ed community website",
+      "icon": "fa-solid fa-globe",
+      "link": "https://www.xai-ed.net/"
     }
   ]
 }

@@ -5,6 +5,12 @@ description: "Invited talk at the XAI-Ed 2027 workshop at LAK27"
 draft: false
 type: "keynote"
 
+# While set, the page shows only a friendly "announced soon" card; remove it
+# once the speaker, title, and abstract are confirmed.
+coming_soon:
+  title: "Our invited speaker will be announced soon"
+  text: "We are finalising the invited talk on explainability and learning outcomes. The speaker, title, and abstract will appear here as soon as they are confirmed."
+
 # Speaker (add image: "/images/<file>" and social links once confirmed)
 speaker:
   name: "Speaker to be announced"

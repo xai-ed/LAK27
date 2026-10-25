@@ -1,9 +1,91 @@
 /* Add your own custom styles here */
 
-/* Interpretation-action loop (home banner): hide the travelling dot for
-   visitors who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .loop-dot {
-    display: none;
-  }
+/* Interpretation-action loop (home banner). Tones: neutral, accent
+   (explanation and understanding), action (the step the workshop targets). */
+.loop {
+  --loop-ring: #b9c6d2;
+  --loop-fill: var(--color-light);
+  --loop-neutral: #8ea2b6;
+  --loop-accent: var(--color-primary);
+  --loop-action: #b86e00;
+  --loop-text: var(--color-text-dark);
+  --loop-muted: var(--color-text-light);
+}
+
+.dark .loop {
+  --loop-ring: #3a5573;
+  --loop-fill: var(--color-darkmode-light);
+  --loop-neutral: #4f6b8a;
+  --loop-accent: #5fd4c0;
+  --loop-action: var(--color-darkmode-primary);
+  --loop-text: var(--color-darkmode-text-dark);
+  --loop-muted: var(--color-darkmode-text-light);
+}
+
+.loop-arc,
+.loop-chevron {
+  fill: none;
+  stroke: var(--loop-ring);
+  stroke-width: 1.5;
+}
+
+.loop-chevron {
+  stroke: var(--loop-neutral);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loop-arc.loop-arc-action,
+.loop-chevron.loop-arc-action {
+  stroke: var(--loop-action);
+  stroke-width: 3;
+}
+
+.loop-center {
+  fill: var(--loop-fill);
+  stroke: var(--loop-ring);
+  stroke-width: 1;
+}
+
+.loop-center-text {
+  fill: var(--loop-text);
+  font-family: var(--font-primary);
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.loop-node rect {
+  fill: var(--loop-fill);
+  stroke: var(--loop-neutral);
+  stroke-width: 1.5;
+}
+
+.loop-num {
+  fill: var(--loop-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+
+.loop-label {
+  fill: var(--loop-text);
+  font-family: var(--font-primary);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.loop-node-accent rect {
+  stroke: var(--loop-accent);
+}
+
+.loop-node-accent .loop-label {
+  fill: var(--loop-accent);
+}
+
+.loop-node-action rect {
+  stroke: var(--loop-action);
+}
+
+.loop-node-action .loop-label {
+  fill: var(--loop-action);
 }

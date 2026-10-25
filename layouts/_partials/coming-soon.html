@@ -1,0 +1,28 @@
+{{/* Friendly placeholder for programme items that are not announced yet.
+  Context: .Params.coming_soon (title, text) */}}
+<section class="section-sm pt-10">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="lg:col-7 md:col-9">
+        <div
+          class="bg-light dark:bg-darkmode-light border-border dark:border-darkmode-border rounded-lg border border-dashed px-8 py-12 text-center">
+          <span
+            class="bg-body dark:bg-darkmode-body text-primary dark:text-darkmode-primary mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full text-2xl">
+            <i class="fa-solid fa-hourglass-half"></i>
+          </span>
+          <h2 class="h4 mb-3">{{ .title | default "To be announced soon" | markdownify }}</h2>
+          {{ with .text }}
+            <p class="mx-auto mb-8 max-w-[34rem]">{{ . | markdownify }}</p>
+          {{ end }}
+          <div class="flex flex-wrap justify-center gap-4">
+            <a class="btn btn-primary btn-sm" href="{{ "cfp" | relURL }}">
+              Call for Papers
+              <i class="fa fa-arrow-right pl-2"></i>
+            </a>
+            <a class="btn btn-outline-primary btn-sm" href="{{ "" | relURL }}">Back to home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

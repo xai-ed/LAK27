@@ -59,36 +59,6 @@
   {{ end }}
   <!-- /Banner -->
 
-  <!-- Stakeholders -->
-  {{ with .Params.stakeholders }}
-    <section class="section-sm">
-      <div class="container">
-        <div class="row">
-          <div class="md:col-10 lg:col-8 mx-auto mb-12 text-center">
-            <h2 class="mb-4">{{ .title | markdownify }}</h2>
-            {{ with .description }}<p class="text-lg">{{ . | markdownify }}</p>{{ end }}
-          </div>
-        </div>
-        <div class="row">
-          {{ range .items }}
-            <div class="md:col-6 lg:col-3 mb-8">
-              <div
-                class="bg-light dark:bg-darkmode-light border-primary dark:border-darkmode-primary h-full rounded-lg border-t-4 p-7">
-                <span
-                  class="bg-body dark:bg-darkmode-body text-primary dark:text-darkmode-primary mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full text-2xl">
-                  <i class="{{ .icon }}"></i>
-                </span>
-                <h3 class="h5 mb-3">{{ .title | markdownify }}</h3>
-                <p class="mb-0">{{ .content | markdownify }}</p>
-              </div>
-            </div>
-          {{ end }}
-        </div>
-      </div>
-    </section>
-  {{ end }}
-  <!-- /Stakeholders -->
-
   <!-- Keynote frame -->
   {{ with site.GetPage "sections/keynote" }}
     {{ if .Params.enable }}
@@ -118,12 +88,21 @@
                       </span>
                     {{ end }}
                     <h3 class="h5 mb-2">{{ .Params.title | markdownify }}</h3>
-                    <p class="mb-0">
-                      <strong>{{ .Params.speaker }}</strong>
-                      {{ with .Params.affiliation }}
-                        <span class="text-text-light">— {{ . | markdownify }}</span>
-                      {{ end }}
-                    </p>
+                    {{ if .Params.speaker }}
+                      <p class="mb-0">
+                        <strong>{{ .Params.speaker }}</strong>
+                        {{ with .Params.affiliation }}
+                          <span class="text-text-light">— {{ . | markdownify }}</span>
+                        {{ end }}
+                      </p>
+                    {{ end }}
+                    {{ with .Params.announcement }}
+                      <p
+                        class="border-primary/40 dark:border-darkmode-primary/40 text-text-dark dark:text-darkmode-text-dark mb-0 flex w-fit items-center gap-2 rounded-full border border-dashed px-4 py-1 text-sm font-semibold">
+                        <i class="fa-solid fa-hourglass-half text-primary dark:text-darkmode-primary"></i>
+                        {{ . | markdownify }}
+                      </p>
+                    {{ end }}
                     {{ with .Params.button }}
                       {{ if .enable }}
                         <a class="btn btn-primary btn-sm mt-5" href="{{ (site.GetPage .link).RelPermalink }}">
@@ -160,6 +139,13 @@
                 {{ with .Params.description }}
                   <p class="mb-5">{{ . | markdownify }}</p>
                 {{ end }}
+                {{ with .Params.announcement }}
+                  <p
+                    class="border-primary/40 dark:border-darkmode-primary/40 text-text-dark dark:text-darkmode-text-dark mb-0 flex w-fit items-center gap-2 rounded-full border border-dashed px-4 py-1 text-sm font-semibold">
+                    <i class="fa-solid fa-hourglass-half text-primary dark:text-darkmode-primary"></i>
+                    {{ . | markdownify }}
+                  </p>
+                {{ end }}
                 {{ with (site.GetPage "panel") }}
                   <div class="flex flex-wrap gap-4">
                     {{ range .RegularPages }}
@@ -188,6 +174,50 @@
     {{ end }}
   {{ end }}
   <!-- /Panel frame -->
+
+  <!-- Programme at a glance -->
+  {{ with .Params.programme }}
+    <section class="section-sm">
+      <div class="container">
+        <div class="row">
+          <div class="md:col-10 lg:col-8 mx-auto mb-12 text-center">
+            <h2 class="mb-4">{{ .title | markdownify }}</h2>
+            {{ with .description }}<p class="text-lg">{{ . | markdownify }}</p>{{ end }}
+          </div>
+        </div>
+        <div class="relative">
+          <div
+            class="bg-border dark:bg-darkmode-border absolute top-8 right-[7%] left-[7%] hidden h-0.5 lg:block"
+            aria-hidden="true"></div>
+          <ol class="relative grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-7">
+            {{ range .items }}
+              <li class="text-center">
+                <span
+                  class="bg-body dark:bg-darkmode-body border-primary dark:border-darkmode-primary text-primary dark:text-darkmode-primary mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full border-2 text-2xl">
+                  <i class="{{ .icon }}"></i>
+                </span>
+                <p class="text-text-light dark:text-darkmode-text-light mb-1 text-sm">{{ .time }}</p>
+                <p class="text-text-dark dark:text-darkmode-text-dark font-semibold leading-snug">
+                  {{ .title | markdownify }}
+                </p>
+              </li>
+            {{ end }}
+          </ol>
+        </div>
+        {{ with .button }}
+          {{ if .enable }}
+            <div class="mt-12 text-center">
+              <a class="btn btn-outline-primary" href="{{ .link | absURL }}">
+                {{ .label }}
+                <i class="fa fa-arrow-right pl-2"></i>
+              </a>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Programme at a glance -->
 
   <!-- Features -->
   {{ range $i, $e:= .Params.features }}
@@ -296,50 +326,6 @@
     {{ end }}
   {{ end }}
   <!-- /Testimonials -->
-
-  <!-- Programme at a glance -->
-  {{ with .Params.programme }}
-    <section class="section-sm">
-      <div class="container">
-        <div class="row">
-          <div class="md:col-10 lg:col-8 mx-auto mb-12 text-center">
-            <h2 class="mb-4">{{ .title | markdownify }}</h2>
-            {{ with .description }}<p class="text-lg">{{ . | markdownify }}</p>{{ end }}
-          </div>
-        </div>
-        <div class="relative">
-          <div
-            class="bg-border dark:bg-darkmode-border absolute top-8 right-[7%] left-[7%] hidden h-0.5 lg:block"
-            aria-hidden="true"></div>
-          <ol class="relative grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-7">
-            {{ range .items }}
-              <li class="text-center">
-                <span
-                  class="bg-body dark:bg-darkmode-body border-primary dark:border-darkmode-primary text-primary dark:text-darkmode-primary mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full border-2 text-2xl">
-                  <i class="{{ .icon }}"></i>
-                </span>
-                <p class="text-text-light dark:text-darkmode-text-light mb-1 text-sm">{{ .time }}</p>
-                <p class="text-text-dark dark:text-darkmode-text-dark font-semibold leading-snug">
-                  {{ .title | markdownify }}
-                </p>
-              </li>
-            {{ end }}
-          </ol>
-        </div>
-        {{ with .button }}
-          {{ if .enable }}
-            <div class="mt-12 text-center">
-              <a class="btn btn-outline-primary" href="{{ .link | absURL }}">
-                {{ .label }}
-                <i class="fa fa-arrow-right pl-2"></i>
-              </a>
-            </div>
-          {{ end }}
-        {{ end }}
-      </div>
-    </section>
-  {{ end }}
-  <!-- /Programme at a glance -->
 
   <!-- Call to action -->
   {{ partial "call-to-action" . }}

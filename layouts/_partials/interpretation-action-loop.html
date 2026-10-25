@@ -1,98 +1,65 @@
-{{/* Interpretation-action loop: nodes evenly spaced on a ring, with arrows
-  between neighbours and a dot travelling around it. Context: banner.loop */}}
+{{/* Interpretation-action loop: numbered pills evenly spaced clockwise on a
+  ring, a chevron midway along each arc, and the outcome in the middle.
+  Colours come from the .loop-* rules in assets/css/custom.css.
+  Context: banner.loop */}}
 {{ $nodes := .nodes }}
 {{ $n := len $nodes }}
 {{ $step := div 360.0 $n }}
-{{ $r := 135.0 }}
 {{ $deg := div math.Pi 180.0 }}
-{{ $gap := 20.0 }}
-<div
-  class="loop relative mx-auto aspect-square w-full max-w-[440px]"
-  role="img"
-  aria-label="{{ .label }}">
-  <svg
-    viewBox="0 0 480 480"
-    class="text-primary dark:text-darkmode-primary absolute inset-0 h-full w-full"
-    aria-hidden="true">
-    <defs>
-      <marker
-        id="loop-arrow"
-        viewBox="0 0 10 10"
-        refX="7"
-        refY="5"
-        markerWidth="6"
-        markerHeight="6"
-        orient="auto">
-        <path d="M0 0L10 5L0 10z" fill="currentColor" />
-      </marker>
-    </defs>
-    <circle
-      cx="240"
-      cy="240"
-      r="{{ $r }}"
-      fill="none"
-      stroke="currentColor"
-      stroke-opacity=".18"
-      stroke-width="2"
-      stroke-dasharray="3 9" />
-    <circle
-      cx="240"
-      cy="240"
-      r="88"
-      class="fill-light dark:fill-darkmode-light" />
-    {{ range $i, $_ := $nodes }}
+{{ $cx := 320.0 }}
+{{ $cy := 300.0 }}
+{{ $r := 190.0 }}
+{{ $w := 204.0 }}
+{{ $h := 64.0 }}
+{{ $gap := 7.0 }}
+<figure class="loop mx-auto w-full max-w-[520px]">
+  <svg viewBox="0 60 640 480" class="h-auto w-full" role="img" aria-label="{{ .label }}">
+    {{/* arcs between neighbouring nodes, split around a midway chevron */}}
+    {{ range $i, $node := $nodes }}
       {{ $a := add -90.0 (mul $i $step) }}
-      {{ $a1 := mul (add $a $gap) $deg }}
-      {{ $a2 := mul (sub (add $a $step) $gap) $deg }}
+      {{ $m := add $a (div $step 2) }}
+      {{ $tone := $node.arc | default "neutral" }}
+      {{ range slice (slice $a (sub $m $gap)) (slice (add $m $gap) (add $a $step)) }}
+        {{ $p1 := mul (index . 0) $deg }}
+        {{ $p2 := mul (index . 1) $deg }}
+        <path
+          class="loop-arc loop-arc-{{ $tone }}"
+          d="M{{ printf "%.1f" (add $cx (mul $r (math.Cos $p1))) }} {{ printf "%.1f" (add $cy (mul $r (math.Sin $p1))) }} A{{ $r }} {{ $r }} 0 0 1 {{ printf "%.1f" (add $cx (mul $r (math.Cos $p2))) }} {{ printf "%.1f" (add $cy (mul $r (math.Sin $p2))) }}" />
+      {{ end }}
+      {{ $mr := mul $m $deg }}
       <path
-        d="M{{ printf "%.1f" (add 240 (mul $r (math.Cos $a1))) }} {{ printf "%.1f" (add 240 (mul $r (math.Sin $a1))) }} A{{ $r }} {{ $r }} 0 0 1 {{ printf "%.1f" (add 240 (mul $r (math.Cos $a2))) }} {{ printf "%.1f" (add 240 (mul $r (math.Sin $a2))) }}"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="3"
-        stroke-linecap="round"
-        marker-end="url(#loop-arrow)" />
+        class="loop-chevron loop-arc-{{ $tone }}"
+        d="M-5 -7L2 0L-5 7"
+        transform="translate({{ printf "%.1f" (add $cx (mul $r (math.Cos $mr))) }} {{ printf "%.1f" (add $cy (mul $r (math.Sin $mr))) }}) rotate({{ printf "%.1f" (add $m 90) }})" />
     {{ end }}
-    <circle r="7" fill="currentColor" class="loop-dot">
-      <animateMotion
-        dur="14s"
-        repeatCount="indefinite"
-        path="M240 {{ sub 240 $r }} A{{ $r }} {{ $r }} 0 1 1 240 {{ add 240 $r }} A{{ $r }} {{ $r }} 0 1 1 240 {{ sub 240 $r }}" />
-    </circle>
+
+    {{ with .center }}
+      <circle class="loop-center" cx="{{ $cx }}" cy="{{ $cy }}" r="96" />
+      {{ $lines := .lines }}
+      {{ $lh := 27.0 }}
+      {{ $y0 := sub $cy (div (mul $lh (sub (len $lines) 1)) 2) }}
+      <text class="loop-center-text" text-anchor="middle" dominant-baseline="central">
+        {{ range $j, $line := $lines }}
+          <tspan x="{{ $cx }}" y="{{ add $y0 (mul $j $lh) }}">{{ $line }}</tspan>
+        {{ end }}
+      </text>
+    {{ end }}
+
+    {{ range $i, $node := $nodes }}
+      {{ $a := mul (add -90.0 (mul $i $step)) $deg }}
+      {{ $x := add $cx (mul $r (math.Cos $a)) }}
+      {{ $y := add $cy (mul $r (math.Sin $a)) }}
+      <g class="loop-node loop-node-{{ $node.tone | default "neutral" }}">
+        <rect
+          x="{{ printf "%.1f" (sub $x (div $w 2)) }}"
+          y="{{ printf "%.1f" (sub $y (div $h 2)) }}"
+          width="{{ $w }}"
+          height="{{ $h }}"
+          rx="{{ div $h 2 }}" />
+        <text x="{{ printf "%.1f" $x }}" y="{{ printf "%.1f" $y }}" text-anchor="middle" dominant-baseline="central">
+          <tspan class="loop-num">{{ printf "%02d" (add $i 1) }}</tspan><tspan class="loop-label" dx="9">{{ $node.label }}</tspan>
+        </text>
+      </g>
+    {{ end }}
   </svg>
-
-  {{ with .center }}
-    <div
-      class="absolute top-1/2 left-1/2 w-[36%] -translate-x-1/2 -translate-y-1/2 text-center">
-      <i
-        class="{{ .icon }} text-primary dark:text-darkmode-primary mb-2 text-2xl md:text-3xl"></i>
-      <p
-        class="font-secondary text-text-dark dark:text-darkmode-text-dark text-sm leading-snug font-bold md:text-base">
-        {{ .label }}
-      </p>
-    </div>
-  {{ end }}
-
-  {{ range $i, $node := $nodes }}
-    {{ $a := mul (add -90.0 (mul $i $step)) $deg }}
-    {{ $x := add 50 (mul (div (mul $r 100) 480) (math.Cos $a)) }}
-    {{ $y := add 50 (mul (div (mul $r 100) 480) (math.Sin $a)) }}
-    {{/* place the label outside the ring so it never crosses an arrow */}}
-    {{ $labelPos := "top-full left-1/2 mt-1 -translate-x-1/2" }}
-    {{ if lt (math.Sin $a) -0.7 }}
-      {{ $labelPos = "bottom-full left-1/2 mb-1 -translate-x-1/2" }}
-    {{ else if and (le (math.Sin $a) 0.7) (gt (math.Cos $a) 0) }}
-      {{ $labelPos = "left-full top-1/2 ml-2 -translate-y-1/2" }}
-    {{ else if le (math.Sin $a) 0.7 }}
-      {{ $labelPos = "right-full top-1/2 mr-2 -translate-y-1/2" }}
-    {{ end }}
-    <div
-      class="bg-body dark:bg-darkmode-body border-primary dark:border-darkmode-primary text-primary dark:text-darkmode-primary absolute flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 text-lg shadow-md md:h-16 md:w-16 md:text-2xl"
-      style="left: {{ printf "%.2f" $x }}%; top: {{ printf "%.2f" $y }}%">
-      <i class="{{ $node.icon }}"></i>
-      <span
-        class="text-text-dark dark:text-darkmode-text-dark {{ $labelPos }} absolute text-xs font-semibold whitespace-nowrap md:text-sm">
-        {{ $node.label }}
-      </span>
-    </div>
-  {{ end }}
-</div>
+</figure>

@@ -6,46 +6,26 @@ banner:
   edition: "The 4th International Workshop on Explainable AI in Education, at LAK27"
   content: "**Date:** March 2027, full-day pre-conference workshop (exact day TBA)<br>**Location:** Recife, Brazil<br>Part of **[LAK27, the 17th International Learning Analytics & Knowledge Conference](https://www.solaresearch.org/events/lak/lak27/)**"
   image: ""
-  # Hero diagram: nodes are placed clockwise from the top
+  # Hero diagram: nodes are placed clockwise from the top.
+  # tone: neutral | accent | action; arc colours the arc leaving that node
   loop:
-    label: "The interpretation-action loop: learner data, model inference, explanation, interpretation, and action, enhancing learning and teaching"
+    label: "The interpretation-action loop: inference, explanation, understanding, and action, enhancing learning and teaching"
     center:
-      label: "Learning & teaching"
-      icon: "fa-solid fa-seedling"
+      lines: ["Enhanced", "learning &", "teaching"]
     nodes:
-      - label: "Learner data"
-        icon: "fa-solid fa-database"
       - label: "Inference"
-        icon: "fa-solid fa-brain"
       - label: "Explanation"
-        icon: "fa-solid fa-comment-dots"
-      - label: "Interpretation"
-        icon: "fa-solid fa-lightbulb"
+        tone: "accent"
+      - label: "Understanding"
+        tone: "accent"
+        arc: "action"
       - label: "Action"
-        icon: "fa-solid fa-route"
+        tone: "action"
   button:
     enable: true
     label: "Call for Papers"
     link: "cfp"
     note: "Registration to the main conference is required to attend"
-
-# Stakeholders
-stakeholders:
-  title: "One inference, four audiences"
-  description: "Students, teachers, parents and caregivers, and educational leaders approach the same inference with distinct goals, prior knowledge, and decision rights, and therefore need distinct explanations."
-  items:
-    - title: "Students"
-      icon: "fa-solid fa-user-graduate"
-      content: "Contrastive and counterfactual explanations that show what could be done differently, supporting the regulation of an ongoing learning process."
-    - title: "Teachers"
-      icon: "fa-solid fa-chalkboard-user"
-      content: "Explanations that support situated sensemaking as well as justification, combining human judgement with automated inference."
-    - title: "Parents & caregivers"
-      icon: "fa-solid fa-people-roof"
-      content: "Explanations that presuppose neither curricular nor statistical literacy."
-    - title: "Educational leaders"
-      icon: "fa-solid fa-building-columns"
-      content: "Aggregated accounts of provenance, subgroup validity, and the consequences of deployment."
 
 # Programme at a glance
 programme:
