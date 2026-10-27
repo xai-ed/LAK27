@@ -18,4 +18,4 @@ social:
     link: https://www.linkedin.com/in/vinitra/
 ---
 
-Vinitra Swamy is a postdoctoral researcher at EPFL. Her research with the ML4ED lab involves explainable AI for education, especially through the lens of reducing adoption barriers for neural networks. Her recent work focuses on uncovering disagreement in post-hoc explainers, using learning science experts to validate explainer accuracy and actionability, and proposing interpretable-by-design neural network architectures.
+Vinitra Swamy is CEO and co-founder of Scholé AI and earned her PhD in Computer Science at EPFL’s ML4ED lab. Her research focuses on human-centric explainable AI for education, including disagreement among post-hoc explainers, expert evaluation of explanation accuracy and actionability, and interpretable-by-design neural network architectures. At Scholé AI, she extends this work to adaptive, multi-agent learning systems, connecting explainability with learner modeling and personalized instruction. She is also teaching faculty for Harvard’s Agentic AI and AI Leadership Intensives.
