@@ -4,7 +4,7 @@ banner:
   title: "XAI-Ed 2027: Closing the Interpretation-Action Loop"
   subtitle: "Actionable Explainable AI to Enhance Learning and Teaching"
   edition: "The 4th International Workshop on Explainable AI in Education, at LAK27"
-  content: "**Date:** March 2027, full-day pre-conference workshop (exact day TBA)<br>**Location:** Recife, Brazil<br>Part of **[LAK27, the 17th International Learning Analytics & Knowledge Conference](https://www.solaresearch.org/events/lak/lak27/)**"
+  content: "**Date:** 8/9 March 2027, full-day pre-conference workshop (exact day TBA)<br>**Location:** Recife, Brazil<br>Part of **[LAK27, the 17th International Learning Analytics & Knowledge Conference](https://www.solaresearch.org/events/lak/lak27/)**"
   image: ""
   # Hero diagram: nodes are placed clockwise from the top.
   # tone: neutral | accent | action; arc colours the arc leaving that node
