@@ -12,6 +12,11 @@ url = "/cfp"
 weight = 2
 
 [[main]]
+name = "Author Guidelines"
+url = "/author-guidelines"
+weight = 3
+
+[[main]]
 name = "Keynote"
 url = "/keynote"
 weight = 3
@@ -42,6 +47,11 @@ weight = 7
 name = "Call for Papers"
 url = "/cfp"
 weight = 1
+
+[[footer]]
+name = "Author Guidelines"
+url = "/author-guidelines"
+weight = 2
 
 [[footer]]
 name = "Schedule"

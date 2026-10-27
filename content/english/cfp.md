@@ -1,7 +1,7 @@
 ---
 title: "Call for Papers"
 meta_title: "Call for Papers — XAI-Ed 2027"
-description: "Call for papers and demonstrations for the XAI-Ed 2027 workshop at LAK27"
+description: "Call for papers for the XAI-Ed 2027 workshop at LAK27"
 draft: false
 ---
 
@@ -18,7 +18,7 @@ Equity, fairness, and transparency run through both questions, since explanation
 
 ### Topics of interest
 
-We invite research contributions, including system demonstrations, on topics including:
+We invite full and short research papers on topics including:
 
 - Effects of explanations on learning processes, self-regulated learning, and learning outcomes.
 - Theoretically grounded explanation, linking XAI and XLA to learning theory and learning design.
@@ -47,8 +47,20 @@ Submissions are invited in English, and the workshop is conducted in English. No
 
 ### Submission
 
-Papers and demonstrations are submitted through EasyChair:
+We invite the following submission types:
 
+| Submission type | Length |
+|---|---|
+| Full paper | 10–14 pages |
+| Short paper | 6–8 pages |
+
+Page limits include references.
+
+Submissions must use the official CEUR-WS one-column template (CEURART), be anonymised for double-blind review, and include a Declaration on Generative AI. Please read the [Author Guidelines]({{< relref "author-guidelines" >}}) for the templates, formatting rules, and anonymisation instructions before you submit.
+
+Papers are submitted through EasyChair:
+
+<a class="btn btn-outline-primary not-prose" href="{{< relref "author-guidelines" >}}">Author Guidelines</a>
 <a class="btn btn-primary not-prose" href="https://easychair.org/conferences/?conf=xaiedlak2027" target="_blank" rel="noopener">Submit a Paper <i class="fa fa-arrow-right pl-2"></i></a>
 
 ### Publication
