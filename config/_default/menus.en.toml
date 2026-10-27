@@ -12,11 +12,6 @@ url = "/cfp"
 weight = 2
 
 [[main]]
-name = "Author Guidelines"
-url = "/author-guidelines"
-weight = 3
-
-[[main]]
 name = "Keynote"
 url = "/keynote"
 weight = 3

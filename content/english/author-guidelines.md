@@ -71,9 +71,9 @@ Replace the template's sample metadata with the lines below. The conference line
 \cortext[1]{Corresponding author.}
 
 \begin{keywords}
-  explainable AI \sep
-  learning analytics \sep
-  your keyword
+  keyword 1 \sep
+  keyword 2 \sep
+  keyword 3
 \end{keywords}
 ```
 
@@ -170,7 +170,7 @@ Upload your PDF to [EasyChair](https://easychair.org/conferences/?conf=xaiedlak2
 
 ### Step 7 — After acceptance: camera-ready version
 
-Upload the final version by **28 February 2027**. This is the version CEUR-WS will publish. After publication, only typos in the title, author names, and affiliations can be corrected, and only within two working days, so please check it carefully.
+Upload the final version by **28 February 2027**. This is the version that will be submitted to CEUR-WS for publication once your paper is accepted. If it is published, only typos in the title, author names, and affiliations can be corrected, and only within two working days, so please check it carefully.
 
 - Restore the full author block: full names, affiliations with country, emails, and ORCID iDs.
 - Add back the acknowledgements and funding information.
@@ -193,6 +193,6 @@ We will send instructions on where to upload the camera-ready version and the si
 
 ---
 
-Questions about the template or the submission process? Please contact the [organisers]({{< relref "organisers" >}}).
+Questions about the template or the submission process? Please contact [rasheed@sd.uni-frankfurt.de](mailto:rasheed@sd.uni-frankfurt.de).
 
 *Based on the CEUR-WS requirements as of October 2026: [Publishing at CEUR-WS.org](https://ceur-ws.org/HOWTOSUBMIT.html) · [CEURART template page](https://ceur-ws.org/Vol-XXX/) · [Policy on AI-Assisting Tools](https://ceur-ws.org/GenAI/Policy.html).*
