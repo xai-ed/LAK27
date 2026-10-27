@@ -45,4 +45,12 @@ Submissions are invited in English, and the workshop is conducted in English. No
 | Camera-ready version | 28 February 2027 |
 | Workshop | March 2027 (exact day TBA), Recife, Brazil |
 
-Submission format and the submission link will be announced here.
+### Submission
+
+Papers and demonstrations are submitted through EasyChair:
+
+<a class="btn btn-primary not-prose" href="https://easychair.org/conferences/?conf=xaiedlak2027" target="_blank" rel="noopener">Submit a Paper <i class="fa fa-arrow-right pl-2"></i></a>
+
+### Publication
+
+Accepted papers will be submitted for publication in the KIOR workshop proceedings and published on the [workshop website]({{< relref "proceedings" >}}). Papers accepted for the workshop will not be included in the LAK27 Companion Proceedings.
