@@ -53,4 +53,4 @@ Papers and demonstrations are submitted through EasyChair:
 
 ### Publication
 
-Accepted papers will be submitted for publication in the KIOR workshop proceedings and published on the [workshop website]({{< relref "proceedings" >}}). Papers accepted for the workshop will not be included in the LAK27 Companion Proceedings.
+Accepted papers will be submitted for publication in the CEUR-WS proceedings and published on the [workshop website]({{< relref "proceedings" >}}). Papers accepted for the workshop will not be included in the LAK27 Companion Proceedings.
