@@ -19,7 +19,7 @@ Accepted papers of XAI-Ed 2027 will be submitted for publication in the [CEUR Wo
 
 All dates are listed in the [Call for Papers]({{< relref "cfp" >}}).
 
-### Step 1 — Get the template
+### Step 1 - Get the template
 
 Use one of the official CEURART templates below. They are the current version (CEURART V 0.62, July 2026) and already contain everything CEUR-WS checks for, including the licence footnote and the Declaration on Generative AI.
 
@@ -43,7 +43,7 @@ More background and sample papers are on the [CEUR-WS template page](https://ceu
 - **The old two-column layout**, or the `twocolumn` option of the LaTeX class. CEUR-WS stopped accepting two-column papers in 2025.
 - **Older copies of the template**, such as Overleaf copies made by other conferences or the old `CEUR-Template-1col.docx` Word file. Many are out of date and lack the Declaration on Generative AI.
 
-### Step 2 — Set up page 1
+### Step 2 - Set up page 1
 
 Replace the template's sample metadata with the lines below. The conference line and copyright year must be identical in every paper of our volume and must match the author agreement, so please copy them exactly.
 
@@ -85,7 +85,7 @@ If you use the LibreOffice template, put the same conference text in the first-p
 
 For the review version, replace the author block as described in [Step 5](#step-5--anonymise-for-double-blind-review).
 
-### Step 3 — Formatting rules
+### Step 3 - Formatting rules
 
 **Do:**
 
@@ -111,7 +111,7 @@ XAI-Ed accepts two types of submissions: full papers and short papers. Stay with
 
 CEUR-WS also classifies papers by "standard pages" of 2,500 characters (about 380–400 words). It lists papers with 10 or more standard pages as regular papers and papers with 5–9 standard pages as short papers.
 
-### Step 4 — Declaration on Generative AI
+### Step 4 - Declaration on Generative AI
 
 CEUR-WS requires every paper to include a section titled **Declaration on Generative AI**, placed after the acknowledgements and before the references. It is required **even if you used no AI tools**. The template already contains the section. Keep the version that applies and delete the other.
 
@@ -140,7 +140,7 @@ publication's content.
 
 Please read the full [CEUR-WS Policy on AI-Assisting Tools](https://ceur-ws.org/GenAI/Policy.html). CEUR-WS removes published papers that violate it.
 
-### Step 5 — Anonymise for double-blind review
+### Step 5 - Anonymise for double-blind review
 
 The CEURART template has no anonymous mode and shows the authors on page 1, so the version you submit for review needs a few temporary changes. Keep the conference line, copyright footnote, and Declaration on Generative AI as they are.
 
@@ -155,7 +155,7 @@ The CEURART template has no anonymous mode and shows the authors on page 1, so t
 - Remove identifying links (for example to GitHub repositories or project pages) or replace them with an anonymised version.
 - Check the PDF's document properties: the author field must be empty.
 
-### Step 6 — Submit
+### Step 6 - Submit
 
 Upload your PDF to [EasyChair](https://easychair.org/conferences/?conf=xaiedlak2027) by **4 December 2026**. Before you upload, check that:
 
@@ -168,7 +168,7 @@ Upload your PDF to [EasyChair](https://easychair.org/conferences/?conf=xaiedlak2
 - [ ] The paper is anonymised: no names, affiliations, acknowledgements, identifying links, or PDF author metadata.
 - [ ] All fonts are embedded in the PDF (the official templates do this by default).
 
-### Step 7 — After acceptance: camera-ready version
+### Step 7 - After acceptance: camera-ready version
 
 Upload the final version by **28 February 2027**. This is the version that will be submitted to CEUR-WS for publication once your paper is accepted. If it is published, only typos in the title, author names, and affiliations can be corrected, and only within two working days, so please check it carefully.
 
