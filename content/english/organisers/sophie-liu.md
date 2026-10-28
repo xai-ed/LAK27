@@ -18,4 +18,4 @@ social:
     link: https://www.linkedin.com/in/sophie-qianhui-liu-09261b235/
 ---
 
-Qianhui (Sophie) Liu is a PhD student at the University of Illinois Urbana-Champaign. Her research in the HEDS lab focuses on applying data mining methods in combination with learning science theories to help improve the efficiency of teaching and learning in various educational settings. She is interested in closing the loop of machine learning to humans for actionable insights through explainable models and techniques.
+Qianhui (Sophie) Liu is a postdoctoral researcher at the University of Houston. Her research focuses on applying AI and data mining methods in combination with educational theories to investigate students' emotional engagement in K-12 reading contexts. She is interested in closing the loop between machine learning and humans for actionable insights through explainable models and techniques.
