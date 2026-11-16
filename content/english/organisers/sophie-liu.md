@@ -4,6 +4,7 @@ email: jakub.kuzilek@fernuni-hagen.de
 image: "/images/sophie.png"
 description: "University of Houston, USA"
 weight: 5
+role: "Programme Committee"
 social:
   - name: github
     icon: fa-brands fa-github

@@ -4,6 +4,7 @@ email: jakub.kuzilek@fernuni-hagen.de
 image: "/images/jakub.png"
 description: "FernUniversität in Hagen, Germany"
 weight: 2
+role: "Chair"
 social:
   - name: github
     icon: fa-brands fa-github

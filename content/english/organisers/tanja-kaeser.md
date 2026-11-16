@@ -4,6 +4,7 @@ email: tanja.kaeser@epfl.ch
 image: "/images/tanja.png"
 description: "EPFL, Switzerland"
 weight: 8
+role: "Programme Committee"
 social:
   - name: scholar
     icon: fa-brands fa-google-scholar

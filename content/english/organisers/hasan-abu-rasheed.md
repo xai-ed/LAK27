@@ -4,6 +4,7 @@ email: rasheed@sd.uni-frankfurt.de
 image: "/images/Hasan_Abu_Rasheed_2.jpeg"
 description: "Goethe University Frankfurt, Germany"
 weight: 1
+role: "Chair"
 social:
 
   - name: scholar

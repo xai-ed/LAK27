@@ -4,6 +4,7 @@ email: christian.weber@uni-siegen.de
 image: "/images/Christian_Weber.jpg"
 description: "University of Siegen, Germany"
 weight: 10
+role: "Programme Committee"
 social:
 
   - name: scholar

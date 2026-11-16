@@ -4,6 +4,7 @@ email: h.khosravi@uq.edu.au
 image: "/images/Hassan_Khosravi.jpeg"
 description: "The University of Queensland, Australia"
 weight: 6
+role: "Programme Committee"
 social:
 
   - name: scholar

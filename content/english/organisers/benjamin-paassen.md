@@ -3,7 +3,8 @@ title: Benjamin Paaßen
 email: 
 image: "/images/benjamin.jpg"
 description: "Bielefeld University, Germany"
-weight: 4
+weight: 3
+role: "Chair"
 social:
   - name: scholar
     icon: fa-brands fa-google-scholar

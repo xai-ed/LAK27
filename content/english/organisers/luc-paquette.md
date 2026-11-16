@@ -4,6 +4,7 @@ email: lpaq@illinois.edu
 image: "/images/luc.png"
 description: "University of Illinois, USA"
 weight: 3
+role: "Programme Committee"
 social:
   - name: github
     icon: fa-brands fa-github

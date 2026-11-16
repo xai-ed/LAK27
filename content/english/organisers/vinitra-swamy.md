@@ -4,6 +4,7 @@ email:
 image: "/images/vini.png"
 description: "Scholé AI, Switzerland"
 weight: 11
+role: "Programme Committee"
 social:
   - name: github
     icon: fa-brands fa-github

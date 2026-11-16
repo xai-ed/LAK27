@@ -4,6 +4,7 @@ email: j.ooge@uu.nl
 image: "/images/jeroen.jpg"
 description: "Utrecht University, Netherlands"
 weight: 7
+role: "Programme Committee"
 social:
 
   - name: scholar
