@@ -13,7 +13,7 @@ Accepted papers of XAI-Ed 2027 will be submitted for publication in the [CEUR Wo
 | **Full papers** | 10–14 pages, including references |
 | **Short papers** | 6–8 pages, including references |
 | **Review** | Double-blind, at least two reviewers |
-| **Submission deadline** | 4 December 2026 |
+| **Submission deadline** | ~~4 December 2026~~ **11 December 2026** (extended) |
 | **Camera-ready deadline** | 28 February 2027 |
 | **Submit via** | [EasyChair](https://easychair.org/conferences/?conf=xaiedlak2027) |
 
@@ -157,7 +157,7 @@ The CEURART template has no anonymous mode and shows the authors on page 1, so t
 
 ### Step 6 - Submit
 
-Upload your PDF to [EasyChair](https://easychair.org/conferences/?conf=xaiedlak2027) by **4 December 2026**. Before you upload, check that:
+Upload your PDF to [EasyChair](https://easychair.org/conferences/?conf=xaiedlak2027) by **11 December 2026** (extended from 4 December). Before you upload, check that:
 
 - [ ] The paper uses the official one-column CEURART template (LaTeX or LibreOffice, not Word), with the layout unchanged.
 - [ ] Page 1 shows the XAI-Ed 2027 conference line and the © 2027 CC BY 4.0 footnote.

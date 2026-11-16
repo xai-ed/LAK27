@@ -40,7 +40,7 @@ Submissions are invited in English, and the workshop is conducted in English. No
 
 | Milestone | Date |
 |---|---|
-| Submission deadline | 4 December 2026 |
+| Submission deadline | ~~4 December 2026~~ **11 December 2026** (extended) |
 | Notification of acceptance | 18 December 2026 |
 | Camera-ready version | 28 February 2027 |
 | Workshop | 8/9 March 2027 (exact day TBA), Recife, Brazil |
